@@ -98,6 +98,7 @@ namespace PdfSharp.Pdf
         public string Producer
         {
             get { return Elements.GetString(Keys.Producer); }
+            set { Elements.SetString(Keys.Producer, value); }
         }
 
         /// <summary>

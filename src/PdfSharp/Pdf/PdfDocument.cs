@@ -463,16 +463,16 @@ namespace PdfSharp.Pdf
                 info.Creator = pdfSharpProducer;
 
             // Keep original producer if file was imported.
-            string producer = info.Producer;
-            if (producer.Length == 0)
-                producer = pdfSharpProducer;
-            else
-            {
-                // Prevent endless concatenation if file is edited with PDFsharp more than once.
-                if (!producer.StartsWith(VersionInfo.Title))
-                    producer = pdfSharpProducer + " (Original: " + producer + ")";
-            }
-            info.Elements.SetString(PdfDocumentInformation.Keys.Producer, producer);
+            //string producer = info.Producer;
+            //if (producer.Length == 0)
+            //    producer = pdfSharpProducer;
+            //else
+            //{
+            //    // Prevent endless concatenation if file is edited with PDFsharp more than once.
+            //    if (!producer.StartsWith(VersionInfo.Title))
+            //        producer = pdfSharpProducer + " (Original: " + producer + ")";
+            //}
+            //info.Elements.SetString(PdfDocumentInformation.Keys.Producer, producer);
 
             // Prepare used fonts.
             if (_fontTable != null)
